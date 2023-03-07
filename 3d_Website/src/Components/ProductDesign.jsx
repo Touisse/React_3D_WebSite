@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Atom from "./Atom";
+import Shoe from "./Shoe";
 import styled from "styled-components";
 
 const Desc = styled.div`
@@ -11,7 +11,7 @@ const Desc = styled.div`
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 200px;
+  bottom: 200px;
   right: 100px;
 
   @media only screen and (max-width: 768px) {
@@ -23,12 +23,14 @@ const Desc = styled.div`
   }
 `;
 
-const Development = () => {
+const ProductDesign = () => {
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 10] }}>
+      <Canvas>
         <Suspense fallback={null}>
-          <Atom />
+          <Stage environment="city" intensity={0.6}>
+            <Shoe />
+          </Stage>
           <OrbitControls enableZoom={false} autoRotate />
         </Suspense>
       </Canvas>
@@ -40,4 +42,4 @@ const Development = () => {
   );
 };
 
-export default Development;
+export default ProductDesign;
