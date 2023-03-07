@@ -25,3 +25,5 @@ REACT_APP_EMAILJS_TEMPLATE_ID=<your EmailJS template ID>` 4. Start the developme
 ## Usage
 
 Once the website is running, you can open it in a web browser by going to http://localhost:3000/. You can interact with the 3D objects by clicking and dragging on them. You can also explore the objects on the map by clicking on them. To send an email message, fill out the form on the "Contact" page and click "Send".
+
+## Interfaces
