@@ -19,7 +19,7 @@ const Container = styled.div`
 `;
 const Left = styled.div`
   flex: 1;
-  height: 50%;
+  height: 1000px;
 `;
 const Right = styled.div`
   display: flex;
