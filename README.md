@@ -29,4 +29,5 @@ To install the website, follow these steps:
 Once the website is running, you can open it in a web browser by going to http://localhost:3000/. You can interact with the 3D objects by clicking and dragging on them. You can also explore the objects on the map by clicking on them. To send an email message, fill out the form on the "Contact" page and click "Send".
 
 ## Interfaces
-soon
+![Capture](https://user-images.githubusercontent.com/63207127/223542390-d8cd9d97-0168-4437-8957-a77527b93b8f.PNG)
+![Capture2](https://user-images.githubusercontent.com/63207127/223542392-e9bf9959-b141-492b-b930-1e5fc898a773.PNG)
