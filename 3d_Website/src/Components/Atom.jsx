@@ -14,18 +14,18 @@ const Shape = () => {
   );
   return (
     <group>
-      <Line worldUnits points={points} color="#cae6f1" lineWidth={0.3} />
+      <Line worldUnits points={points} color="orange" lineWidth={0.3} />
       <Line
         worldUnits
         points={points}
-        color="#cae6f1"
+        color="orange"
         lineWidth={0.3}
         rotation={[0, 0, 1]}
       />
       <Line
         worldUnits
         points={points}
-        color="#cae6f1"
+        color="orange"
         lineWidth={0.3}
         rotation={[0, 0, -1]}
       />
