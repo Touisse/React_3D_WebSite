@@ -39,7 +39,7 @@ const ListItems = styled.li`
   font-weight: bold;
   cursor: pointer;
   color: transparent;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px black;
   position: relative;
   ::after {
     content: "${(props) => props.text}";
@@ -48,7 +48,7 @@ const ListItems = styled.li`
     left: 0;
     overflow: hidden;
     width: 0px;
-    color: pink;
+    color: orange;
     white-space: nowrap;
   }
   &:hover {

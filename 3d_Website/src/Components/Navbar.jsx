@@ -32,6 +32,7 @@ const List = styled.ul`
 `;
 const ListItem = styled.li`
   cursor: pointer;
+  color: black;
 `;
 const Icon = styled.img`
   cursor: pointer;
@@ -40,7 +41,7 @@ const Icon = styled.img`
 const Button = styled.button`
   width: 100px;
   padding: 10px;
-  background-color: #da4ea2;
+  background-color: orange;
   color: white;
   border: none;
   border-radius: 5px;

@@ -28,6 +28,7 @@ const Right = styled.div`
 `;
 const Title = styled.h1`
   font-size: 74px;
+  color: black;
 `;
 const What = styled.div`
   display: flex;
@@ -37,7 +38,7 @@ const What = styled.div`
 `;
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: black;
 `;
 const Line = styled.img`
   height: 5px;
@@ -45,7 +46,7 @@ const Line = styled.img`
 const Button = styled.button`
   border: none;
   border-radius: 5px;
-  background-color: #da4ea2;
+  background-color: orange;
   color: white;
   width: 120px;
   padding: 10px;
@@ -53,7 +54,7 @@ const Button = styled.button`
   font-weight: 500;
 `;
 const Sub = styled.h2`
-  color: #da4ea2;
+  color: orange;
 `;
 
 const Who = () => {

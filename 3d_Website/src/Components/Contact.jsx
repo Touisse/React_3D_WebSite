@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Map from "./Map";
+import emailjs from "@emailjs/browser";
 
 const Section = styled.div`
   height: 100vh;
@@ -28,6 +29,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-weight: 200;
+  color: black;
 `;
 
 const Form = styled.form`
@@ -54,7 +56,7 @@ const TextArea = styled.textarea`
   background-color: #e8e6e6;
 `;
 const Button = styled.button`
-  background-color: #da4ea2;
+  background-color: orange;
   color: white;
   border: none;
   font-weight: bold;
@@ -65,17 +67,45 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 1;
 `;
+
 const Contact = () => {
+  const [success, setSuccess] = useState(null);
+  const ref = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_xgfuq2b",
+        "template_mjvn9hm",
+        ref.current,
+        "ARttOcWeLdXk6WLXT"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+  };
   return (
     <Section>
       <Container>
         <Left>
-          <Form>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" />
-            <TextArea placeholder="Write your Message" rows={10} />
-            <Button>Send</Button>
+            <Input placeholder="Name" name="name" />
+            <Input placeholder="Email" name="email" />
+            <TextArea
+              placeholder="Write your Message"
+              rows={10}
+              name="message"
+            />
+            <Button type="submit">Send</Button>
+            {success && "Your Message was sent successfully :)"}
           </Form>
         </Left>
         <Right>
