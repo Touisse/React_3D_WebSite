@@ -35,12 +35,12 @@ const Map = () => {
         dx={-90}
         dy={-30}
         connectorProps={{
-          stroke: "black",
+          stroke: "white",
           strokeWidth: 2,
           strokeLinecap: "round",
         }}
       >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="black">
+        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="white">
           {"Paris"}
         </text>
       </Annotation>
@@ -49,12 +49,12 @@ const Map = () => {
         dx={-90}
         dy={-30}
         connectorProps={{
-          stroke: "black",
+          stroke: "white",
           strokeWidth: 2,
           strokeLinecap: "round",
         }}
       >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="black">
+        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="white">
           {"Casablanca"}
         </text>
       </Annotation>

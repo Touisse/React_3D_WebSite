@@ -22,8 +22,35 @@ const Icons = styled.div`
   align-items: center;
   gap: 20px;
 `;
-const Logo = styled.img`
-  height: 50px;
+const Logo = styled.h1`
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: orange;
+  -webkit-text-stroke: 1px orange;
+  position: relative;
+  ::after {
+    content: "${(props) => props.text}";
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0px;
+    color: white;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px white;
+  }
+  &:hover {
+    ::after {
+      animation: moveText 0.5s linear both;
+
+      @keyframes moveText {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
 `;
 const List = styled.ul`
   display: flex;
@@ -53,7 +80,7 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/logo.png" />
+          <Logo text="YTouisse">YTouisse</Logo>
           <List>
             <ListItem>Home</ListItem>
             <ListItem>Studio</ListItem>

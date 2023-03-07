@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Cube from "./Cube";
 
 const Section = styled.div`
   height: 100vh;
@@ -17,6 +19,7 @@ const Container = styled.div`
 `;
 const Left = styled.div`
   flex: 1;
+  height: 50%;
 `;
 const Right = styled.div`
   display: flex;
@@ -61,7 +64,16 @@ const Who = () => {
   return (
     <Section>
       <Container>
-        <Left></Left>
+        <Left>
+          <Canvas camera={{ position: [6, 6, 6], fov: 30 }}>
+            <Suspense fallback={null}>
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Cube />
+              <OrbitControls enableZoom={false} autoRotate />
+            </Suspense>
+          </Canvas>
+        </Left>
         <Right>
           <Title>Think outside the square space</Title>
           <What>
