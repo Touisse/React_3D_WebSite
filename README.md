@@ -17,10 +17,12 @@ To install the website, follow these steps:
 2. Install the dependencies by running `npm install`.
 3. Create a `.env` file and add your Mapbox API key and EmailJS credentials. Example:
 
-`REACT_APP_MAPBOX_API_KEY=<your Mapbox API key>
-REACT_APP_EMAILJS_USER_ID=<your EmailJS user ID>
-REACT_APP_EMAILJS_SERVICE_ID=<your EmailJS service ID>
-REACT_APP_EMAILJS_TEMPLATE_ID=<your EmailJS template ID>` 4. Start the development server by running `npm start`.
+`REACT_APP_MAPBOX_API_KEY=<your Mapbox API key>` <br>
+`REACT_APP_EMAILJS_USER_ID=<your EmailJS user ID>`<br>
+`REACT_APP_EMAILJS_SERVICE_ID=<your EmailJS service ID>`<br>
+`REACT_APP_EMAILJS_TEMPLATE_ID=<your EmailJS template ID>` <br>
+<br>
+4. Start the development server by running `npm start`.
 
 ## Usage
 
